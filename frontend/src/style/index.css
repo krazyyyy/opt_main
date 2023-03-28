@@ -1,0 +1,470 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'colus';
+    src: url('./assets/fonts/Colus-Regular.woff');
+}
+@font-face {
+    font-family: 'poppins';
+    src: url('./assets/fonts/Poppins-Regular.ttf');
+}
+@font-face {
+    font-family: 'poppins';
+    src: url('./assets/fonts/Poppins-Bold.ttf');
+    font-weight: 700;
+}
+
+iframe{
+    display: none;
+}
+#root{
+    position: relative;
+}
+body {
+    margin: 0;
+    font-family: 'poppins',-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+        'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+        'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #11031A;
+}
+.colus{
+    font-family: 'colus';
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+        monospace;
+}
+ .heroOverlayTop{
+    background: linear-gradient(180deg, #13031A 0%, rgba(19, 3, 26, 0) 100%);
+ }
+ .heroOverlayLeft{
+    background: linear-gradient(90deg, #13031A 0%, rgba(19, 3, 26, 0) 100%);
+}
+.heroOverlayLeft2{
+    background: linear-gradient(90deg, rgba(19, 3, 26, 0.9) 30.81%, rgba(19, 3, 26, 0) 80.61%);
+}
+ .heroOverlayRight{
+    background: linear-gradient(-90deg, #13031A 0%, rgba(19, 3, 26, 0) 100%);
+}
+ 
+ .heroOverlayBottom1{
+    background: linear-gradient(180deg, #13031A 0%, rgba(19, 3, 26, 0) 100%);
+    transform: rotate(-180deg);
+}
+.heroOverlayBottom2{
+    background: linear-gradient(180deg, rgba(17, 3, 26, 0) 0%, #11031A 100%);
+ }
+ .heroOverlayLeftToRight{
+    background: linear-gradient(90deg, #13031A 37.68%, rgba(19, 3, 26, 0) 80.61%);
+ }
+ .clipPathButton{
+    clip-path: polygon(5% 0, 100% 0, 95% 100%, 0% 100%);
+ }
+ .clipPathButtonMob{
+    clip-path: polygon(22% 0, 100% 0, 78% 100%, 0% 100%);
+ }
+ .clipPath2{
+    clip-path: polygon(30% 0, 100% 0, 70% 100%, 0% 100%);
+ }
+ .dottedBorderGradient{
+    border: 1px dashed #99939C;
+ }
+ .dottedBorderGradient::before{
+    content: '';
+    background-image: linear-gradient( #99939C00, #99939C,  #99939C00);
+ }
+ .mobOverlay{
+    position: absolute;
+width: 100%;
+height: 280px; 
+bottom: 0;
+background: linear-gradient(183.05deg, rgba(17, 3, 26, 0) 2.53%, #11031A 54.62%);
+ }
+ .myTab{
+    /* filter: drop-shadow(0px 53px 55px rgba(0, 0, 0, 0.56)); */
+    position: relative;
+    overflow: hidden;   
+ }
+
+ .tabOverlay1{ 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 13.4375vw;
+    left: 0px;
+    top: 0px;
+
+    background: rgba(17, 3, 26, 0.5);
+        backdrop-filter: blur(25px); 
+ 
+ }
+ .tabOverlay2{
+    position: absolute;
+    width: 13.9328125vw;
+    height: 10.10625vw;
+    left: 14.72734375vw;
+    top: 7.434375vw;
+
+    filter: blur(79.3831px);
+ }
+ .rightTab .tabOverlay2{
+    position: absolute;
+    width: 13.9328125vw;
+    height: 10.10625vw;
+    left: -3.47734375vw;
+    top: 7.434375vw;
+
+    filter: blur(79.3831px);
+ }
+ .tabOverlay2::before{
+    content: '';
+    position: absolute;
+width: 10.10625vw;
+height: 10.10625vw;
+left: 4.296875vw;
+top: 0px;
+background: #FFFF01;
+
+filter: blur(13.0543px);
+ }
+ .tabOverlay2::after{
+    content: '';
+    position: absolute;
+width: 10.10625vw;
+height: 10.10625vw;
+left: 0;
+top: 0px;
+
+background: #FF005C;
+
+filter: blur(13.0543px);
+ }
+ 
+
+
+ .yellowEllipse2{
+    background: #f90;
+    height: 144px;
+    left: 67px;
+    top: -20px;
+    width: 144px;
+    -webkit-filter: blur(139.5px);
+    filter: blur(139.5px);
+    position: absolute;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+
+ }
+
+ 
+ .yellowEllipse{
+    background: #855c1e;
+    height: 208px;
+    right: 27px;
+    top: -55px;
+    width: 208px;
+    -webkit-filter: blur(139.5px);
+    filter: blur(139.5px);
+    position: absolute;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+ }
+
+
+
+
+ 
+ .txt span{
+    background: linear-gradient(180deg, rgba(245, 245, 245, 0) 10.73%, #F5F5F5 44.06%, #00F2F8 96.67%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+text-fill-color: transparent;
+}
+.txt h1{
+    text-shadow: 0px 0.729206px 47.3984px #00F2F8, 0px 0.729206px 2.91682px #00F2F8;
+    text-transform: uppercase;
+}
+
+.up{
+background: linear-gradient(239.17deg, #FF005C -159.3%, rgba(255, 0, 92, 0) 68.69%), linear-gradient(52.37deg, rgba(0, 242, 248, 0.2) -38.07%, rgba(0, 242, 248, 0) 97.88%), rgba(17, 3, 26, 0.5);
+backdrop-filter: blur(25px);
+/* Note: backdrop-filter has minimal browser support */
+
+border-radius: 24px;
+z-index: 111;
+position: relative;
+}
+
+.main.active{
+    max-height: 10.625vw;
+padding-top: 2.5vw;
+padding-bottom: 2.5vw;
+border: 1px solid #FF005C;
+
+}
+
+.chevron.active{
+    transform: rotate(180deg);
+}
+
+
+.homeAboutGradient{
+    filter: blur(50px);
+}
+.homeAboutGradient1{
+    position: absolute;
+    width: 315.53px;
+height: 239.03px; 
+bottom: 0;
+background: #FF005C;
+filter: blur(166.5px);
+transform: rotate(-90deg);
+}
+.homeAboutGradient2{
+    position: absolute;
+    width: 315.53px;
+height: 239.03px; 
+top: 0;
+background: #00F2F8;
+filter: blur(166.5px);
+transform: rotate(-90deg);
+}
+
+.blurryEllipse{
+    position: absolute;
+width: 647.28px;
+height: 647.28px;
+top: 21.171875vw ;
+left: 50%;
+
+background: #1F1128;
+filter: blur(139.5px);
+transform:  translate(-50%,-50%) rotate(90deg);
+}
+
+.tableEllpse{
+    position: absolute;
+width: 647.28px;
+height: 647.28px; 
+top:-59px;
+background: #1F1128;
+filter: blur(139.5px);
+transform: rotate(90deg);
+}
+.pop-up {
+    background: #2F193D;
+box-shadow: 0px 53px 55px rgba(0, 0, 0, 0.56);
+border-radius: 24px;
+}
+.loginModalOverlays{
+    position: absolute;
+    width: 494.31px;
+height: 407.62px;
+left: -109px;
+bottom: -9px;
+
+filter: blur(79.3831px);
+}
+ .loginModalOverlayTop{
+    position: absolute;
+width: 165.32px;
+height: 165.32px;
+left: 0;
+top: 0;
+
+background: #FF005C;
+filter: blur(13.0543px);
+ }
+ .loginModalOverlayRightBotom{
+    position: absolute;
+width: 165.32px;
+height: 165.32px;
+right: 0;
+bottom: 0;
+
+background: #FF005C;
+filter: blur(13.0543px);
+ }
+ .loginModalOverlayRightBotom2{
+    position: absolute;
+ 
+right: 18px;
+bottom: 100px;
+width: 129.36px;
+height: 129.36px; 
+
+background: #FFFF01;
+filter: blur(13.0543px);
+ }
+
+ #loginModal{
+    opacity: 0;
+    pointer-events: none;
+    transition: all .8s;
+ }
+ #loginModal.active{
+    opacity: 1;
+    pointer-events: initial;
+ }
+ .myTab2{
+    filter: drop-shadow(0px 53px 55px rgba(0, 0, 0, 0.56));
+border-radius: 24px;
+position: relative;
+overflow: hidden;
+ }
+ .myTab2 .myTabOverlays{
+    position: absolute;
+    width: 361.14px;
+height: 261.94px;
+left: 5.72px;
+top: 28.87px;
+
+filter: blur(79.3831px);
+ }
+ .myTabOverlays .overlay1{
+    position: absolute;
+width: 261.94px;
+height: 261.94px;
+left: 0px;
+top: 0px;
+
+background: #FF005C;
+filter: blur(13.0543px);
+ }
+ .myTabOverlays .overlay2{
+    position: absolute;
+    width: 261.94px;
+    height: 261.94px;
+    right: 0px;
+    top: 0px;
+    
+    background: #FFFF01;
+    filter: blur(13.0543px);
+ }
+ .myOverlay2{
+    position: absolute;
+width: 320px;
+height: 172px;
+left: 0px;
+top: 0px;
+
+background: rgba(17, 3, 26, 0.5);
+backdrop-filter: blur(25px);
+/* Note: backdrop-filter has minimal browser support */
+
+border-radius: 24px;
+ }
+
+ .tableBtn{
+    filter: drop-shadow(0px 53px 55px rgba(0, 0, 0, 0.56));
+border-radius: 24px;
+position: relative;
+height: 7.890625vw;
+overflow: hidden;
+ }
+
+ .tableBtnOverlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(17, 3, 26, 0.5);
+backdrop-filter: blur(25px);
+/* Note: backdrop-filter has minimal browser support */
+    height: 13.4375vw;
+border-radius: 24px;
+ }
+ .tableBtnGradients{
+    position: absolute;
+    width: 28.2140625vw;
+    height: 20.4640625vw;
+    filter: blur(79.3831px);
+    left: .5vw;
+    top: 2.5vw;
+ }
+ .tableBtnGradient1{
+    background: #FFFF01;
+    width: 20.4640625vw;
+    height: 20.4640625vw;
+    right: 0;
+    filter: blur(13.0543px);
+    position:absolute;
+ }
+ .tableBtnGradient2{
+    position:absolute;
+    background: #FF005C;
+    width: 20.4640625vw;
+    height: 20.4640625vw;
+    filter: blur(13.0543px);
+ }
+
+ 
+@media (max-width:768px) {
+    .main.active{
+        max-height: 352px;
+   padding: 32px 32px;
+    }
+    .tabOverlay1{
+        height: 172px;
+    }
+    .tableBtnOverlay{
+        height: 105.31px;
+        background: rgba(17, 3, 26, 0.5);
+backdrop-filter: blur(15.3067px);
+
+border-radius: 14.6944px
+    }
+    .tableBtnGradients{
+        width: 221.11px;
+height: 160.38px;
+    }
+    .tableBtnGradient2{
+        background: #FF005C;
+        filter: blur(7.99274px);
+width: 160.38px;
+height: 160.38px;
+    }
+    .tableBtnGradient1{
+        background: #FFFF01;
+filter: blur(7.99274px);
+width: 160.38px;
+height: 160.38px;
+right: 0;
+    }
+    .tableBtn{
+        height: 61.84px;
+    }
+.yellowEllipse2{
+    position: absolute;
+    width: 144px;
+    height: 144px;
+    left: 79.19px;
+    top: -105px;
+    
+    background: #FF9900;
+    filter: blur(139.5px);
+    transform: rotate(90deg);
+}
+.yellowEllipse{
+    position: absolute;
+    width: 208px;
+    height: 208px;
+    left: 79.19px;
+    top: -164px;
+    
+    background: #855C1E;
+    filter: blur(139.5px);
+    transform: rotate(90deg);
+}
+.tableEllpse{
+    top: 0;
+}
+
+}

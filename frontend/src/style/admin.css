@@ -1,0 +1,77 @@
+.admin_btn_left {
+    background-color: var(--red) !important;
+    font-size: 1.8rem !important;
+    width: 11vw;
+    margin-right: 1rem !important;
+}
+
+.admin_btn_right {
+    background-color: var(--dark-yellow) !important;
+    font-size: 1.8rem !important;
+    width: 11vw;
+}
+
+input[type='datetime-local']::-webkit-calendar-picker-indicator {
+    background-color: var(--dark-yellow) !important;
+}
+
+.stats_card {
+    background-color: black !important;
+    color: var(--dark-yellow) !important;
+    border: 1px solid !important;
+    box-shadow: 0 3px 6px var(--red) !important;
+}
+
+.stats_img {
+    width: auto;
+    height: 10rem;
+    margin-right: 1rem;
+}
+
+.stats_container {
+    display: flex;
+    align-items: center;
+}
+
+.stats_heading {
+    color: var(--dark-yellow);
+}
+
+.stats_number {
+    color: var(--red);
+}
+
+.card_btn {
+    background-color: var(--red) !important;
+    font-size: 1rem !important;
+}
+
+.admin_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.row_span_5 {
+    grid-row: span 5;
+}
+
+.column_span_2 {
+    grid-column: span 2;
+}
+
+.contract_container {
+    margin: auto;
+    width: 50%;
+}
+
+.gov_container {
+    margin: auto;
+    width: 25%;
+}
+
+.dispense_btn {
+    background-color: var(--red) !important;
+    font-size: 1.4rem !important;
+    margin: auto;
+}
