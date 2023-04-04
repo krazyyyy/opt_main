@@ -99,9 +99,13 @@ const Home_Logged = (props) => {
     const openForm = (type) => {
         
         if (props.address) {
+            props.showFunc()
             setShowFormModal(true);
             setFormType(type);
-        } else props.setShowWalletModal(true);
+        } else {
+            props.showFunc()
+            props.setShowWalletModal(true);
+        }
     };
     // note: this doesn't track the "reward opt" distributed to users
     async function AccountOPT () {

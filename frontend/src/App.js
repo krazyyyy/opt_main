@@ -43,6 +43,11 @@ function App(props) {
         setAdminLog(props.is_admin_logged);
     }, [props.is_admin_logged]);
     
+    function activateLoginModal() {
+        
+        const loginModal = document.getElementById('loginModal');
+        loginModal.classList.add('active');
+      }
     return (
         <div>
             <Router>
@@ -76,12 +81,12 @@ function App(props) {
                     <Route
                         path="/"
                         element={
-                            <Layout props={props} setShowWalletModal={setShowWalletModal} setShowCurrentModal={setShowCurrentModal}>
+                            <Layout props={props} setShowWalletModal={setShowWalletModal} setShowCurrentModal={setShowCurrentModal} showFunc={activateLoginModal} >
                             {!props.selected && (
-                            <Home props={props} setShowWalletModal={setShowWalletModal} />
+                            <Home props={props} setShowWalletModal={setShowWalletModal} showFunc={activateLoginModal}/>
                             )}
                           {props.selected && (
-                        <Home_Logged props={props} setShowWalletModal={setShowWalletModal}/>
+                        <Home_Logged props={props} setShowWalletModal={setShowWalletModal} showFunc={activateLoginModal}/>
                             )}
                         </Layout>
                         }
@@ -90,7 +95,7 @@ function App(props) {
                     <Route
                     path="/About"
                     element={
-                    <Layout props={props} setShowWalletModal={setShowWalletModal} setShowCurrentModal={setShowCurrentModal}>
+                    <Layout props={props} setShowWalletModal={setShowWalletModal} setShowCurrentModal={setShowCurrentModal} showFunc={activateLoginModal}>
                         <About />
                     </Layout>
                     }

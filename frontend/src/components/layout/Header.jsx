@@ -10,7 +10,12 @@ import { connect } from 'react-redux';
 import { Button } from '@mui/material';
 
 const Header = (props) => {
-    const handleWalletModal = () => props.setShowWalletModal(true);
+    const handleWalletModal = (event) => {
+        event.preventDefault();
+        props.setShowWalletModal(true);
+        props.showFunc()
+        
+    }
     const handleCurrentModal = () => props.setShowCurrentModal(true);
   
   return (

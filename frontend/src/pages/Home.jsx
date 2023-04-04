@@ -66,7 +66,11 @@ const Home = (props) => {
         if (props.address) {
             setShowFormModal(true);
             setFormType(type);
-        } else props.setShowWalletModal(true);
+        } else{
+            props.showFunc()
+            props.setShowWalletModal(true);
+
+        } 
     };
 
     // note: this doesn't track the "reward opt" distributed to users
@@ -172,6 +176,7 @@ const Home = (props) => {
                     ? 'column-reverse'
                     : 'column'
             }
+            
             order={formType === ButtonTypes.WITHDRAW ? -1 : 1}
         />
 )}
