@@ -261,6 +261,10 @@ filter: blur(139.5px);
 transform:  translate(-50%,-50%) rotate(90deg);
 }
 
+.z_index {
+    z-index: 9999;
+}
+
 .tableEllpse{
     position: absolute;
 width: 647.28px;

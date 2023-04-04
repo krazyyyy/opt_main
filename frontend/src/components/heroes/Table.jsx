@@ -8,8 +8,8 @@ const Table = () => {
     <div className="relative md:py-[9vw]">
     <div className='w-[79.93%] md:w-[35vw] mx-[auto] top-[14.078125vw] left-[8.75vw] md:absolute text-center flex flex-col items-center gap-y-[24px] md:gap-y-[1.875vw]'>
                 <HomeHeading title={"How is a winner selected?"}/>
-                <HomePara classes={" text-[#ADADAD]  "} title={"At the time of prize drawing, a snapshot is secured of all current OPT holders and prize-eligible wallets. Utilizing this data, a cumulative probability distribution is generated. In conjunction a random number is generated and this is matched to the closest value within the probability range. "}/>
-                <HomePara classes={" text-[#ADADAD]  "} title={"The following table illustrates our mechanism with an example of five wallets participating with ascending OPT balances of 10, 20, 30, 40, and 50:"}/>
+                <HomePara classes={"z-50 text-[#ADADAD]  "} title={"At the time of prize drawing, a snapshot is secured of all current OPT holders and prize-eligible wallets. Utilizing this data, a cumulative probability distribution is generated. In conjunction a random number is generated and this is matched to the closest value within the probability range. "}/>
+                <HomePara classes={"z-50 text-[#ADADAD]  "} title={"The following table illustrates our mechanism with an example of five wallets participating with ascending OPT balances of 10, 20, 30, 40, and 50:"}/>
                 
 
                 <button className='text-[#EDDB0F] text-[18px] md:text-[1.40625vw] font-[700]'>Learn More</button>

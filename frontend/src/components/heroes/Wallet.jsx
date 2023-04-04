@@ -11,7 +11,7 @@ const Wallet = () => {
     <div className="relative">
     <div className='w-[79.93%] mx-[auto] md:mx-[unset] md:w-[35vw] top-[16vw] right-[8.28125vw] md:absolute text-center flex flex-col items-center gap-y-[16px] md:gap-y-[1.25vw]'>
                 <HomeHeading title={"How are prizes distributed?"}/>
-                <HomePara classes={" text-[#ADADAD] md:w-[29.13515625vw] "} title={"Prizes are awarded in OPT and distributed automatically to the winning wallet address. These winners are posted to a public list, accessible through the web-based application."}/>
+                <HomePara classes={"z-50 text-[#ADADAD] md:w-[29.13515625vw] "} title={"Prizes are awarded in OPT and distributed automatically to the winning wallet address. These winners are posted to a public list, accessible through the web-based application."}/>
     </div>
     <div className=' relative top-[-35vw] h-[1108px] md:h-[unset]'>
         <img src={wallet} alt="Wallet"  className='w-[85vw] hidden md:block'/>

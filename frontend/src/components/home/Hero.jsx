@@ -25,13 +25,13 @@ const Hero = () => {
         <img src={frame} alt="Frame" className='absolute top-0 left-0 w-full h-full object-contain hidden md:block' />
         <img src={mobframe} alt="Frame" className='absolute top-0   w-[380.61px] h-[unset] object-cover md:hidden block' />
           
-    <h2 className={`text-[#EDDB0F] text-[20.9px] leading-[25.08px]  
+    <h2 className={`z_index text-[#EDDB0F] text-[20.9px] leading-[25.08px]  
     tracking-[21px] mb-[28px] mt-[72.4px]
     colus md:text-[1.6328125vw] md:leading-[1.959375vw]  md:tracking-[1.640625vw] md:mb-[2.1875vw] md:mt-[5.9375vw]`}>About</h2>
            
-            <div className='w-[305px] md:w-[23.828125vw] md:mb-[1.875vw] flex text-center flex-col gap-y-[12px] mb-[32.2px] md:gap-y-[0.9375vw] text-[#8C7998]'>
-               <HomePara classes={"text-[#8C7998]"} title={"We are reintroducing the Algorand blockchain to prize-linked staking, which combines low-yield staking with a weekly prize game! Prizes are generated on the interest earned on deposited funds through participation in the Algorand Foundation Governance program. By leveraging this low-risk mechanism, we are able to guarantee a prize pool and an exciting weekly community event!"}/>
-               <HomePara classes={"text-[#8C7998]"} title={" "}/> 
+            <div className='z_index w-[305px] md:w-[23.828125vw] md:mb-[1.875vw] flex text-center flex-col gap-y-[12px] mb-[32.2px] md:gap-y-[0.9375vw] text-[#8C7998]'>
+               <HomePara classes={"z_index text-[#8C7998]"} title={"We are reintroducing the Algorand blockchain to prize-linked staking, which combines low-yield staking with a weekly prize game! Prizes are generated on the interest earned on deposited funds through participation in the Algorand Foundation Governance program. By leveraging this low-risk mechanism, we are able to guarantee a prize pool and an exciting weekly community event!"}/>
+               <HomePara classes={"z_index text-[#8C7998]"} title={" "}/> 
            
             </div>
   
