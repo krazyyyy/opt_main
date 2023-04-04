@@ -1,4 +1,4 @@
-import { mkTxParams, tx, types } from '@algo-builder/web';
+import { types } from '@algo-builder/web';
 import {
     GlobalStateKeys,
     LocalStateKeys,
@@ -61,7 +61,7 @@ async function executeRekeyedTx(
         if (selectedWalletType === Wallet.ALGOSIGNER) {
             const signTxns = await web.signTransaction(txns);
             const txInfo = await web.sendGroupTransaction(signTxns);
-            const confirmedTx = await web.waitForConfirmation(txInfo.txId);
+            await web.waitForConfirmation(txInfo.txId);
         } else {
             const txnsGroup = txns.map((v) => v.txn);
             const signTxns = await web.connector.signTransaction(
@@ -72,7 +72,7 @@ async function executeRekeyedTx(
             );
 
             const Uint8ArraySignedTx = signTxns?.map((stxn) => stxn.blob);
-            const confirmedTx = await web.sendAndWait(Uint8ArraySignedTx);
+            await web.sendAndWait(Uint8ArraySignedTx);
         }
     } catch (e) {
         console.error('Rekeyed Transaction Failed', e);

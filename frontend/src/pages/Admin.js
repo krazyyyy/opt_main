@@ -75,7 +75,7 @@ function Admin(props) {
     const [globalState, setGlobalState] = useState(undefined);
 
     const [loading, setLoading] = useState(false);
-    const [sendVrf, setSendVrf] = useState(false);
+    const [sendVrf, setSendVrf] = useState(true);
 
     const [governance, setGovernance] = useState(0);
     const [updateCustodialWalletsData, setCustodialWalletData] =
@@ -148,15 +148,16 @@ function Admin(props) {
         setStatus(status);
     }
 
-    async function sendVRF () {
+    async function sendVRFFunc () {
         let response = await send_vrf(props.address)
+
     }
         async function getVRF () {
-        let response = await vrf_randomizer(props.address)
+        let response = await vrf_randomizer("726KLAKOQEQLWTQCJFBSP4JWJWASQ7T5OX6ABRKAY6GMBAA4GFSYBO6QGM")
         let resp = reveal_vrf_number(response)
-        if (resp) {
-            setSendVrf(true)
-        }
+        // if (resp) {
+        //     setSendVrf(false)
+        // }
     }
 
     async function handlePauseContract(status) {
@@ -627,8 +628,9 @@ function Admin(props) {
                 heading="VRF"
                 buttonText="GET VRF NUMBER"
                 action={getVRF}
-                actionTwo={sendVRF}
-                buttonTextTwo="Send VRD"
+                btnDisabledTwo={sendVrf}
+                actionTwo={sendVRFFunc}
+                buttonTextTwo="Send VRf"
              />
           
         <div>

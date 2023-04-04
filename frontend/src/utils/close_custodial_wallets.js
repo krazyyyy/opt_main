@@ -1,15 +1,14 @@
 import { types } from '@algo-builder/web';
-import { AppActions, LocalStateKeys } from '../constants/constants.js';
-import { algodClient, indexerClient } from './algob.config.js';
+import { AppActions } from '../constants/constants.js';
+import { algodClient } from './algob.config.js';
 const {
     tryExecuteTx,
     chunkArray,
-    readAppLocalState,
     OptAppID,
     executeRekeyedTx,
     getCustodialWallets
 } = require('./common.js');
-const { getApplicationAddress, default: algosdk } = require('algosdk');
+const { default: algosdk } = require('algosdk');
 
 /**
  * Returns a list of custodial wallet addresses whose balance is above 10000 ALGO.

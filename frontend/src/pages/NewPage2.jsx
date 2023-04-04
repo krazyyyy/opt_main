@@ -10,14 +10,10 @@ import bgMob from '../assets/images/loggedIn/bgMob.jpg'
 import Tab from '../components/utils/Tab'
 import { connect } from 'react-redux';
 import { changeWallet, updateAddress } from '../redux/wallet/actions';
-import { Button, CircularProgress, Dialog } from '@mui/material';
-import ConnectWallet from '../components/ConnectWallet';
-import Form from '../components/Form';
+import { CircularProgress, Dialog } from '@mui/material';
 import {
     ButtonTypes,
     GlobalStateKeys,
-    ImageSrc,
-    Routes,
     Color
 } from '../constants/constants';
 import { useNavigate } from 'react-router-dom';
@@ -30,7 +26,6 @@ import { convertDateToSeconds } from '../constants/date';
 
 import LotteryTable from '../components/LotteryTable';
 import { getRewardAmt } from '../utils/dispense_lottery';
-import { getApplicationAddress } from 'algosdk';
 
 const NewPage2 = (props) => {
   const [showFormModal, setShowFormModal] = useState(false);

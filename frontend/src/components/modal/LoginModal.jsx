@@ -182,9 +182,9 @@ const LoginModal = (props) => {
     <div className="loginModalOverlayRightBotom2"></div>
 </div>
 {!showAddressInfo &&
-<div className='flex w-[320px] h-[320px] flex-col items-center justify-center md:w-[25vw] md:h-[21.484375vw] z-[2] overflow-hidden relative'>
+<div className='flex w-[320px] h-[320px] flex-col items-center justify-center md:w-[25vw] md:h-[23.484375vw] z-[2] overflow-hidden relative'>
    
-   <h4 className='text-[20px] z-[5] leading-[24px] mb-[22px] md:text-[1.5625vw] md:leading-[1.875vw] text-center md:mb-[1.71875vw] font-[colus] text-[#FFFFFF]'>Connect to wallet</h4>
+   <h4 className='text-[20px] z-[5] leading-[24px] pt-[10px] mt-[22px] mb-[22px] md:text-[1.5625vw] md:leading-[1.875vw] text-center md:mb-[1.71875vw] font-[colus] text-[#FFFFFF]'>Connect to wallet</h4>
       {loading ? (
       
       <div className='w-[273px] cursor-pointer z-[5] h-[82px] md:w-[21.328125vw] md:h-[6.40625vw] mx-[auto] bg-[#EDDB0F] rounded-[9px] flex justify-start items-center
@@ -201,7 +201,7 @@ pl-[16px] md:pl-[1.25vw]'>
     </div>
         </div>
       ) : (
-        <div className='flex w-[320px] h-[320px] flex-col items-center justify-center md:w-[25vw] md:h-[21.484375vw] z-[2] overflow-hidden relative'>
+        <div className='flex w-[320px] h-[320px] flex-col items-center justify-center md:w-[25vw] mb-[18px] md:h-[23.484375vw] z-[2] overflow-hidden relative'>
         <div className='w-[273px] cursor-pointer z-[5] h-[82px] md:w-[21.328125vw] md:h-[6.40625vw] mx-[auto] bg-[#EDDB0F] rounded-[9px] mb-[16px] md:mb-[1.25vw]
         flex justify-start items-center
         pl-[16px] md:pl-[1.25vw] 

@@ -120,7 +120,7 @@ function App(props) {
               </Layout>
             }
           />
-           {/* <Route
+           <Route
                   path="/admin"
                   element={
                       <PrivateRoute admin={isAdminLogged}>
@@ -129,15 +129,15 @@ function App(props) {
                           </FooterContainer>
                       </PrivateRoute>
                   }
-              /> */}
-           <Route
+              />
+           {/* <Route
                   path="/admin"
                   element={
                           <FooterContainer>
                               <Admin />
                           </FooterContainer>
                   }
-              />
+              /> */}
               <Route
                   path="/admin/lottery"
                   element={

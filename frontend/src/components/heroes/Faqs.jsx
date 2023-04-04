@@ -58,16 +58,34 @@ governance commitments.
 const Faqs = () => {
 
   const handleClick =(e)=>{
-const selectedDropdown =  e.target.parentElement.querySelector('.main')
-    document.querySelectorAll(".main").forEach((dropdown)=>{
-      if(selectedDropdown === dropdown){
-        dropdown.classList.toggle("active")
-        
-      }else{
-        dropdown.classList.remove("active")
+    const selectedChevron = e.target.closest('.chevron');
+    console.log(selectedChevron)
+    if (selectedChevron) {
+      console.log("chev")
+      const selectedDropdown =  e.target.parentElement.parentElement.querySelector('.main')
+      
+      document.querySelectorAll(".main").forEach((dropdown)=>{
+        if(selectedDropdown === dropdown){
+          dropdown.classList.toggle("active")
+          
+        }else{
+          dropdown.classList.remove("active")
+  
+        }
+      })
+    } else {
+      const selectedDropdown =  e.target.parentElement.querySelector('.main')
 
-      }
-    })
+      document.querySelectorAll(".main").forEach((dropdown)=>{
+        if(selectedDropdown === dropdown){
+          dropdown.classList.toggle("active")
+          
+        }else{
+          dropdown.classList.remove("active")
+  
+        }
+      })
+    }
 
   }
   return (
