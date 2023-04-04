@@ -57,37 +57,40 @@ governance commitments.
 
 const Faqs = () => {
 
-  const handleClick =(e)=>{
-    const selectedChevron = e.target.closest('.chevron');
-    console.log(selectedChevron)
+  const handleClick = (e) => {
+    const selectedChevron = e.target.closest(".chevron");
+  
     if (selectedChevron) {
-      console.log("chev")
-      const selectedDropdown =  e.target.parentElement.parentElement.querySelector('.main')
-      
-      document.querySelectorAll(".main").forEach((dropdown)=>{
-        if(selectedDropdown === dropdown){
-          dropdown.classList.toggle("active")
-          
-        }else{
-          dropdown.classList.remove("active")
+      console.log("chev");
+      const selectedDropdown = e.target.parentElement.parentElement.querySelector(
+        ".main"
+      );
   
+      document.querySelectorAll(".main").forEach((dropdown) => {
+        if (selectedDropdown === dropdown) {
+          dropdown.classList.toggle("active");
+          selectedChevron.classList.toggle("upside-down"); // Add or remove the class to toggle the chevron icon
+        } else {
+          dropdown.classList.remove("active");
         }
-      })
+      });
     } else {
-      const selectedDropdown =  e.target.parentElement.querySelector('.main')
-
-      document.querySelectorAll(".main").forEach((dropdown)=>{
-        if(selectedDropdown === dropdown){
-          dropdown.classList.toggle("active")
-          
-        }else{
-          dropdown.classList.remove("active")
+      const selectedDropdown = e.target.parentElement.querySelector(".main");
   
+      document.querySelectorAll(".main").forEach((dropdown) => {
+        if (selectedDropdown === dropdown) {
+          dropdown.classList.toggle("active");
+          const chevronIcon = e.target.querySelector(".chevron");
+          if (chevronIcon) {
+            chevronIcon.classList.toggle("upside-down"); // Add or remove the class to toggle the chevron icon
+          }
+        } else {
+          dropdown.classList.remove("active");
         }
-      })
+      });
     }
-
-  }
+  };
+  
   return (
     <section className="question">
     <div className="Container w-[332px] md:w-[87.65625vw] mx-[auto] pt-[5vw]">

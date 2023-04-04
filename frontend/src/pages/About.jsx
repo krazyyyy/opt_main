@@ -11,16 +11,17 @@ import Table from '../components/heroes/Table'
 import Wallet from '../components/heroes/Wallet'
 import Ring from '../components/heroes/Ring'
 import Faqs from '../components/heroes/Faqs'
+import { connect } from 'react-redux';
+import { changeWallet, updateAddress } from '../redux/wallet/actions';
 
 
-
-const About = () => {
-  
+const About = (props) => {
+  console.log(props)
   return (
     <>
-    <div className='bg-[#11031A] overflow-hidden'>
+    <div className='bg-[#11031A] pb-[64px] overflow-hidden'>
  
-   <Hero />
+   <Hero props={props} />
     
    <PrizeMoney />
  
@@ -46,5 +47,24 @@ const About = () => {
 
   )
 }
+const mapStateToProps = (state) => {
+  return {
+      selected: state.wallet.selected,
+      address: state.wallet.address,
+      is_admin_logged: state.wallet.is_admin_logged,
+      selected_network: state.wallet.selected_network,
+      admin_addr: state.wallet.admin_addr,
+      success: state.feedback.success
+  };
+};
 
-export default About
+const mapDispatchToProps = (dispatch) => {
+  return {
+      changeWallet: (payload) => dispatch(changeWallet(payload)),
+      updateAddress: (payload) => dispatch(updateAddress(payload))
+  };
+};
+
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(About);

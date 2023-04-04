@@ -6,9 +6,48 @@ import frame from '../../assets/images/home/frame.svg'
 import mobframe from '../../assets/images/home/mobframe.svg'
 import BtnGroups from '../utils/BtnGroups'
 import HomePara from '../utils/HomePara'
+import WithDraw from '../modal/WithDraw'
+import {
+  ButtonTypes,
+  GlobalStateKeys,
+  ImageSrc,
+  Routes,
+  Color
+} from '../../constants/constants';
+import  { useEffect, useState } from 'react';
 
 
-const Hero = () => {
+const Hero = ({props}) => {
+  console.log(props)
+  const [isDepositValid, setDepositValid] = useState(true);
+  const [showFormModal, setShowFormModal] = useState(false);
+  const [formType, setFormType] = useState('');
+  const openForm = (type) => {
+      
+    if (props.address) {
+        setShowFormModal(true);
+        setFormType(type);
+    } else{
+        
+        props.showFunc()
+        props.setShowWalletModal(true);
+
+    } 
+};
+
+{showFormModal && (
+  <WithDraw
+      closeModal={(state) => setShowFormModal(state)}
+      type={formType}
+      displayFlexDirection={
+          formType === ButtonTypes.WITHDRAW
+              ? 'column-reverse'
+              : 'column'
+      }
+      
+      order={formType === ButtonTypes.WITHDRAW ? -1 : 1}
+  />
+)}
   return (
     <section className='bg-[#11031A] relative min-h-[110vh] overflow-hidden md:pb-[10.3125vw]'>
         <img src={bg} alt="Background Image" className='w-full object-cover top-[93.25px] md:top-0 fixed md:left-0 hidden md:block' />
@@ -31,7 +70,7 @@ const Hero = () => {
            
             <div className='z_index w-[305px] md:w-[23.828125vw] md:mb-[1.875vw] flex text-center flex-col gap-y-[12px] mb-[32.2px] md:gap-y-[0.9375vw] text-[#8C7998]'>
                <HomePara classes={"z_index text-[#8C7998]"} title={"We are reintroducing the Algorand blockchain to prize-linked staking, which combines low-yield staking with a weekly prize game! Prizes are generated on the interest earned on deposited funds through participation in the Algorand Foundation Governance program. By leveraging this low-risk mechanism, we are able to guarantee a prize pool and an exciting weekly community event!"}/>
-               <HomePara classes={"z_index text-[#8C7998]"} title={" "}/> 
+               <BtnGroups props={props} isDepositValid={isDepositValid} ButtonTypes_DEPOSIT={ButtonTypes.DEPOSIT} ButtonTypes_WITHDRAW={ButtonTypes.WITHDRAW} openForm={openForm} classes={"white pr-[40px] mt-[40px]"} />
            
             </div>
   

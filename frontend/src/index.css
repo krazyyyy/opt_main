@@ -265,6 +265,10 @@ transform:  translate(-50%,-50%) rotate(90deg);
     z-index: 9999;
 }
 
+.upside-down {
+    transform: rotate(180deg);
+  }
+
 .tableEllpse{
     position: absolute;
 width: 647.28px;

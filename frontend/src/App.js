@@ -96,7 +96,7 @@ function App(props) {
                     path="/About"
                     element={
                     <Layout props={props} setShowWalletModal={setShowWalletModal} setShowCurrentModal={setShowCurrentModal} showFunc={activateLoginModal}>
-                        <About />
+                        <About props={props} setShowWalletModal={setShowWalletModal} showFunc={activateLoginModal} />
                     </Layout>
                     }
                 />
