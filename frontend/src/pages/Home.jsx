@@ -62,7 +62,6 @@ const Home = (props) => {
     }, [props.success, props.selected_network]); // update if OPT/algo is withrawn/deposited
 
     const openForm = (type) => {
-        
         if (props.address) {
             setShowFormModal(true);
             setFormType(type);
