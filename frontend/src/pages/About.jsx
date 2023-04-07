@@ -25,7 +25,7 @@ const About = (props) => {
     
    <PrizeMoney />
  
-    <section className='bg-[#11031A]  md:py-[4vw] relative z-[16]'>
+    <section className='bg-[#11031A]  md:py-[4vw] relative z-[16] mb-[136px]'>
 <InfoGraphic />
   
 <Score />
