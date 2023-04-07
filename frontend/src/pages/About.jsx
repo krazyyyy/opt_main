@@ -16,10 +16,10 @@ import { changeWallet, updateAddress } from '../redux/wallet/actions';
 
 
 const About = (props) => {
-  console.log(props)
+  
   return (
     <>
-    <div className='bg-[#11031A] pb-[64px] overflow-hidden'>
+    <div className='bg-[#11031A] overflow-hidden'>
  
    <Hero props={props} />
     

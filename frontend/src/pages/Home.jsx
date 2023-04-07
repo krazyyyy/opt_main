@@ -66,11 +66,18 @@ const Home = (props) => {
             setShowFormModal(true);
             setFormType(type);
         } else{
-            props.showFunc()
             props.setShowWalletModal(true);
-
+            props.showFunc()
+            
         } 
     };
+
+    const handleWalletModal = (event) => {
+        event.preventDefault();
+        props.setShowWalletModal(true);
+        props.showFunc()
+        
+    }
 
     // note: this doesn't track the "reward opt" distributed to users
     async function fetchTotalDistributedOPT() {

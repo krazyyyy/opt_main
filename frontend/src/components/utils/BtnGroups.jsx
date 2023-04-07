@@ -7,7 +7,7 @@ const BtnGroups = ({props, classes,white, isDepositValid, ButtonTypes_DEPOSIT, B
      
     document.getElementById('loginModal').classList.add('active')
 }
-  
+  console.log(`BTN Group:${props}`) 
 
 
   return (
