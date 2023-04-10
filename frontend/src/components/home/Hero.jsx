@@ -69,7 +69,7 @@ const Hero = ({props}) => {
            
             <div className='z_index w-[305px] md:w-[23.828125vw] md:mb-[1.875vw] flex text-center flex-col gap-y-[12px] mb-[32.2px] md:gap-y-[0.9375vw] text-[#8C7998]'>
                <HomePara classes={"z_index text-[#8C7998]"} title={"We are reintroducing the Algorand blockchain to prize-linked staking, which combines low-yield staking with a weekly prize game! Prizes are generated on the interest earned on deposited funds through participation in the Algorand Foundation Governance program. By leveraging this low-risk mechanism, we are able to guarantee a prize pool and an exciting weekly community event!"}/>
-               <BtnGroups props={props} isDepositValid={isDepositValid} ButtonTypes_DEPOSIT={ButtonTypes.DEPOSIT} ButtonTypes_WITHDRAW={ButtonTypes.WITHDRAW} openForm={openForm} classes={"white pr-[130px] mt-[40px] sm:pr-[0px]"} />
+               <BtnGroups props={props} isDepositValid={isDepositValid} ButtonTypes_DEPOSIT={ButtonTypes.DEPOSIT} ButtonTypes_WITHDRAW={ButtonTypes.WITHDRAW} openForm={openForm} classes={"white pr-[130px] mt-[40px]"} />
            
             </div>
   
